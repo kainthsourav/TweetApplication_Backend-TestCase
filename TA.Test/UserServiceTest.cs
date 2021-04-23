@@ -32,9 +32,10 @@ namespace TA.Test
         {
             var result = _userService.CheckUserExists(username);
 
-            Assert.That(result.loginId.Equals(username));
+            Assert.That(result.username.Equals(username));
         }
 
+        [Test]
         public void ShouldRegister()
         {
             UserModel user = new UserModel();

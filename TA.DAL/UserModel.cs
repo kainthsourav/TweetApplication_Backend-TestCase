@@ -27,7 +27,7 @@ namespace TA.DAL
 
 
         [Required(ErrorMessage = "LoginId is required")]
-        public string loginId { get; set; }
+        public string username { get; set; }
 
 
         [Required(ErrorMessage = "Password is required")]

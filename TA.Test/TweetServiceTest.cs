@@ -133,7 +133,7 @@ namespace TA.Test
             TweetLikesModel tweetLikesModel = new TweetLikesModel();
             tweetLikesModel.tweetId = "";
             tweetLikesModel.userId = "";
-            tweetLikesModel.loginId = "";
+            tweetLikesModel.username = "";
 
             var result = _tweetService.LikeTweet(tweetLikesModel);
 
@@ -146,7 +146,7 @@ namespace TA.Test
             TweetLikesModel tweetLikesModel = new TweetLikesModel();
             tweetLikesModel.tweetId = "";
             tweetLikesModel.userId = "";
-            tweetLikesModel.loginId = "";
+            tweetLikesModel.username = "";
             var result = _tweetService.UnLike(tweetLikesModel);
 
             Assert.IsTrue(result);

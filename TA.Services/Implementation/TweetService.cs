@@ -55,10 +55,10 @@ namespace TA.Services.Implementation
         {
             List<TweetModel> tweetModels = new List<TweetModel>();
             UserModel user = new UserModel();
-            user=_userRepository.FindByCondition(x => x.loginId.Equals(loginId));
+            user=_userRepository.FindByCondition(x => x.username.Equals(loginId));
             if(user!=null)
             {
-                tweetModels = _tweetRepository.FindAllByCondition(x => x.userId.Equals(user.userId));
+                tweetModels = _tweetRepository.FindAllByCondition(x => x.username.Equals(user.username));
             }
             return tweetModels;
         }

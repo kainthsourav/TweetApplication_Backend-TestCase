@@ -17,7 +17,7 @@ namespace TA.DAL
 
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
         public string userId { get; set; }
-        public string loginId { get; set; }
+        public string username { get; set; }
 
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]

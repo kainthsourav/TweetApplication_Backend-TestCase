@@ -27,7 +27,7 @@ namespace TA.Services.Implementation
                 }
                 else
                 {
-                    user = _userRepository.FindByCondition(x => x.loginId.Equals(username));
+                    user = _userRepository.FindByCondition(x => x.username.Equals(username));
                 }
             }
             catch (Exception ex)
@@ -105,7 +105,7 @@ namespace TA.Services.Implementation
             UserModel isUserExists = new UserModel();
             try
             {
-                isUserExists = _userRepository.FindByCondition(x => x.loginId.Equals(loginId) &&
+                isUserExists = _userRepository.FindByCondition(x => x.username.Equals(loginId) &&
                 x.password.Equals(changePassword.password));
 
                 if (isUserExists != null)
@@ -167,7 +167,7 @@ namespace TA.Services.Implementation
         public UserModel GetUserByUsername(string username)
         {
             UserModel userModels = new UserModel();
-            userModels = _userRepository.FindByCondition(x => x.loginId.Contains(username));
+            userModels = _userRepository.FindByCondition(x => x.username.Contains(username));
             return userModels;
         }
      
