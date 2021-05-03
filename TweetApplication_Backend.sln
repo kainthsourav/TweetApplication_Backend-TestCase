@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TA.Repository", "TA.Reposit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TA.EmailService", "TA.EmailService\TA.EmailService.csproj", "{0E0142DF-9A8B-457D-960F-68404BE1E607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA.Test", "TA.Test\TA.Test.csproj", "{C1940191-AA5D-4D4B-9E2A-0BB562015F5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TA.Test", "TA.Test\TA.Test.csproj", "{C1940191-AA5D-4D4B-9E2A-0BB562015F5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
