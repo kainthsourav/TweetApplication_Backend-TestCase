@@ -7,9 +7,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using TA.EmailService.Implementation;
-using TA.EmailService.Interface;
-using TA.EmailService.Models;
 using TA.Repository;
 using TA.Repository.Implementation;
 using TA.Repository.Interface;
@@ -43,14 +40,7 @@ namespace TA.WebAPI
             services.AddScoped<ITweetCommentsRepository, TweetCommentsRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ITweetService, TweetService>();
-            services.AddScoped<IEmailSender, EmailSender>();
 
-            var emailConfig = Configuration
-            .GetSection("EmailConfiguration")
-            .Get<EmailConfiguration>();
-            services.AddSingleton(emailConfig);
-
-            
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
            .AddJwtBearer(options =>
            {

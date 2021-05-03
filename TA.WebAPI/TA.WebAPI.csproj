@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TA.EmailService\TA.EmailService.csproj" />
     <ProjectReference Include="..\TA.Repository\TA.Repository.csproj" />
     <ProjectReference Include="..\TA.Services\TA.Services.csproj" />
   </ItemGroup>

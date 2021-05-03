@@ -11,8 +11,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using TA.DAL;
-using TA.EmailService.Interface;
-using TA.EmailService.Models;
 using TA.Services.Interface;
 
 namespace TA.WebApi.Controllers
@@ -23,13 +21,11 @@ namespace TA.WebApi.Controllers
     {
         private  readonly IUserService _userService;
         private readonly IConfiguration _config;
-        private readonly IEmailSender _emailSender;
    
-        public UserController(IUserService userService,IConfiguration configuration, IEmailSender emailSender)
+        public UserController(IUserService userService,IConfiguration configuration)
         {
             _userService = userService;
             _config = configuration;
-            _emailSender = emailSender;
         }
 
         // User Registeration
@@ -188,11 +184,11 @@ namespace TA.WebApi.Controllers
                             {"email", forgotPassword.Email }
                         };
 
-                        var callback = QueryHelpers.AddQueryString(forgotPassword.ClientURI, param);
+                      //  var callback = QueryHelpers.AddQueryString(forgotPassword.ClientURI, param);
 
-                        var message = new Message(new string[] { forgotPassword.Email }, "Reset password token", callback);
+                       // var message = new Message(new string[] { forgotPassword.Email }, "Reset password token", callback);
 
-                        _emailSender.SendEmail(message);
+                      //  _emailSender.SendEmail(message);
 
                         return new JsonResult("Mail Sent");
                     }
